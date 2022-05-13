@@ -66,7 +66,10 @@
 //check starting here for changes
       var marker = L.marker([row.Latitud, row.Longitud], {
 	      opacity: 1
-      }).bindPopup(row.Localidad);
+      }).bindPopup("<strong>Localidad: </strong>" + row.Localidad + "<br/>" + 
+                  "<strong>Departamento: </strong>" + row.Departamento + "<br/>" +
+                  "<strong>Provincia: </strong>" + row.Provincia + "<br/>" +
+                  "<strong>Estado: </strong>" + row.Estado + "<br/>");
       markers.addLayer(marker);
      
     }
@@ -74,7 +77,7 @@
   map.addLayer(markers);
 //no more changes past here
   map.attributionControl.setPrefix(
-    'AlterMundi ❤️ Data \u003ca href=\"https://datos.arsat.com.ar/dataset/puntos-de-conexion-refefo\"\u003eARSAT 12/04/22'
+    '<a href=\"https://AlterMundi.Net\"\u003eAlterMundi</a> ❤️ <a href=\"https://datos.arsat.com.ar/dataset/puntos-de-conexion-refefo\"\u003eData ARSAT 12/04/22</a>'
   );
 
   </script>
